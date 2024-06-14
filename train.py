@@ -60,21 +60,6 @@ if __name__ == "__main__":
         random.seed(1 + worker_id)
 
     """-------------------------------- Dataloader --------------------------------"""
-    train_dataset_1 = plydataset("data/train-flod-1", 'train', 'meshsegnet')
-    train_loader_1 = DataLoader(train_dataset_1, batch_size=batch_size, shuffle=True, num_workers=8, worker_init_fn=worker_init_fn)
-    test_dataset_1 = plydataset("data/test-flod-1", 'test', 'meshsegnet')
-    test_loader_1 = DataLoader(test_dataset_1, batch_size=1, shuffle=True, num_workers=8)
-
-    train_dataset_2 = plydataset("data/train-flod-2", 'train', 'meshsegnet')
-    train_loader_2 = DataLoader(train_dataset_2, batch_size=batch_size, shuffle=True, num_workers=8,worker_init_fn=worker_init_fn)
-    test_dataset_2 = plydataset("data/test-flod-2", 'test', 'meshsegnet')
-    test_loader_2 = DataLoader(test_dataset_2, batch_size=1, shuffle=True, num_workers=8)
-
-    train_dataset_3 = plydataset("data/train-flod-3", 'train', 'meshsegnet')
-    train_loader_3 = DataLoader(train_dataset_3, batch_size=batch_size, shuffle=True, num_workers=8,worker_init_fn=worker_init_fn)
-    test_dataset_3 = plydataset("data/test-flod-3", 'test', 'meshsegnet')
-    test_loader_3 = DataLoader(test_dataset_3, batch_size=1, shuffle=True, num_workers=8)
-
     # train_dataset_4 = plydataset("data/train-U-n", 'train', 'meshsegnet')
     # train_loader_4 = DataLoader(train_dataset_4, batch_size=batch_size, shuffle=True, num_workers=8,worker_init_fn=worker_init_fn)
     # test_dataset_4 = plydataset("data/test-U", 'test', 'meshsegnet')
