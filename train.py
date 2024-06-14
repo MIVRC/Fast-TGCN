@@ -94,17 +94,6 @@ if __name__ == "__main__":
     dice_loss = DiceLoss()
     # iou_label = torch.ones((1, 17)).float().cuda()
     for epoch in range(0, 301):
-        # number = random.randint(1, 3)
-        # number = 2
-        # if number == 1:
-        #     train_loader = train_loader_1
-        #     test_loader = test_loader_1
-        # elif number == 2:
-        #     train_loader = train_loader_2
-        #     test_loader = test_loader_2
-        # elif number == 3:
-        #     train_loader = train_loader_3
-        #     test_loader = test_loader_3
         train_loader = train_loader_4
         test_loader = test_loader_4
         scheduler.step()
