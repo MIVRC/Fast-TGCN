@@ -71,16 +71,7 @@ if __name__ == "__main__":
     test_loader_4 = DataLoader(test_dataset_4, batch_size=1, shuffle=True, num_workers=8)
 
     """--------------------------- Build Network and optimizer----------------------"""
-    # model = TSGCNet(in_channels=12, output_channels=17, k=k)
-    # model = TestModel(in_channels=12, output_channels=33, k=12)
-    # model = ablation(in_channels=12, output_channels=33, k=12)
-    # model = PointNetDenseCls(k=33)
-    # model = PointNet2(33)
-    # model = MeshSegNet()
     model = Baseline(in_channels=12, output_channels=17)
-    # model = SGNet(in_channels=12, output_channels=33, k=k)
-    # model = PointTransformerSeg()
-    # model = torch.nn.DataParallel(model, device_ids=[0,1])
     model.cuda()
     optimizer = torch.optim.Adam(
     model.parameters(),
