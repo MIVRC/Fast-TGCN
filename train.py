@@ -113,7 +113,7 @@ if __name__ == "__main__":
 
             # iou_tabel = torch.zeros((17, 3)).float().cuda()
             # print(iou_tabel.shape)
-            pred = model(coordinate, points_face)
+            pred = model(coordinate, index_face)
             label_face = label_face.view(-1, 1)[:, 0]
             pred = pred.contiguous().view(-1, 17)
             # pred_ = pred.max(dim=-1)[0]
